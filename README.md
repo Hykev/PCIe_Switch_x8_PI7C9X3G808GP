@@ -33,20 +33,24 @@ El proyecto incluye:
 
 ## Contenido del repositorio
 Allegro
+
     - Archivo zip con todo el proyecto para orcad, incluyendo librerias utilizadas.
 
 Schematics
+
     - Proyecto Capture CIS (.DSN)
     - Archivos PCB y librerías (.BRD)
     (Para visualizar facilmente)
     
 Manufacturing
+    
     - Gerbers
     - Drill files
     - Pick & Place
     - BOM
 
 Docs
+
     - Datasheets
     - EVB reference
     - PCIe layout guides
