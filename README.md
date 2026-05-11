@@ -40,7 +40,7 @@ El proyecto incluye:
     
     Proyecto Capture CIS (.DSN)
     Archivos PCB y librerías (.BRD)
-
+    (Para visualizar facilmente)
     
 /Manufacturing
     
