@@ -16,37 +16,41 @@ El proyecto incluye:
 ---
 
 ## Herramientas utilizadas OrCADx Pro
-Capture CIS
-PCB Editor / Allegro
-Constraint Manager
+* Capture CIS
+* PCB Editor / Allegro
+* Constraint Manager
 
 ---
 
 ## El diseño actual:
 
-No utiliza Hot Plug
-CLKREQ# con pull-up
-Uso de PDC_L en puertos downstream
-SMBus/I2C no utilizados en downstream PCIe
+* No utiliza Hot Plug
+* CLKREQ# con pull-up
+* Uso de PDC_L en puertos downstream
+* SMBus/I2C no utilizados en downstream PCIe
 
 ---
 
 ## Contenido del repositorio
 /Allegro
+
     Archivo zip con todo el proyecto para orcad, incluyendo librerias utilizadas.
 
 /Schematics
+    
     Proyecto Capture CIS (.DSN)
     Archivos PCB y librerías (.BRD)
 
     
 /Manufacturing
+    
     Gerbers
     Drill files
     Pick & Place
     BOM
 
 /Docs
+    
     Datasheets
     EVB reference
     PCIe layout guides
