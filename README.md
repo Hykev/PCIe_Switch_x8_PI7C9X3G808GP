@@ -54,8 +54,7 @@ El proyecto incluye:
 /Schematic.pdf
     Exportación PDF del esquemático completo
 
-```
-
+---
 
 ## Licencia
 Este proyecto se comparte únicamente con fines educativos y de desarrollo. Verificar licencias y restricciones del fabricante del switch PCIe antes de uso comercial.
