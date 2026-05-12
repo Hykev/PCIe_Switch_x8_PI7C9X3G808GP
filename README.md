@@ -32,30 +32,30 @@ El proyecto incluye:
 ---
 
 ## Contenido del repositorio
-Allegro
 
-    - Archivo zip con todo el proyecto para orcad, incluyendo librerias utilizadas.
+/DRL
+    Archivos de perforado (NC Drill)
 
-Schematics
+/GERBER
+    Archivos Gerber para fabricación
 
-    - Proyecto Capture CIS (.DSN)
-    - Archivos PCB y librerías (.BRD)
-    (Para visualizar facilmente)
-    
-Manufacturing
-    
-    - Gerbers
-    - Drill files
-    - Pick & Place
-    - BOM
+/BOM_PCIe_PCIe.BOM
+    BOM exportado en formato texto
 
-Docs
+/BOM_PCIe_PCIe.BOM.xlsx
+    BOM exportado en formato Excel
 
-    - Datasheets
-    - EVB reference
-    - PCIe layout guides
+/PCIE-PCIE.DSN
+    Proyecto esquemático de OrCAD Capture CIS
 
----
+/pcie-pcie_3.brd
+    Archivo PCB de Cadence Allegro
+
+/Schematic.pdf
+    Exportación PDF del esquemático completo
+
+```
+
 
 ## Licencia
 Este proyecto se comparte únicamente con fines educativos y de desarrollo. Verificar licencias y restricciones del fabricante del switch PCIe antes de uso comercial.
