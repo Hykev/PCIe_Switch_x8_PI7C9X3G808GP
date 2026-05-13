@@ -1,4 +1,4 @@
-# PCIe Gen3 Switch Carrier Board
+# PCIe to PCIe Gen3 Switch Carrier Board
 ---
 
 #### Electrónica 2 y Diseño Electrónico 1 - Kevin González - Universidad del Istmo de Guatemala
