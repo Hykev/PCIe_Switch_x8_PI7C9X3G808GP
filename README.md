@@ -1,38 +1,170 @@
-# PCIe Switch a x8 lanes basado en el chip PI7C9X3G808GP de Diodes
+# PCIe Gen3 Switch Carrier Board
+---
+
+#### Electrónica 2 y Diseño Electrónico 1 - Kevin González - Universidad del Istmo de Guatemala
 
 ---
 
-## Descripción
-
-Este proyecto consiste en el diseño completo de una tarjeta PCI Express basada en el switch PCIe de la EVB de referencia del fabricante "Diodes Incorporated".
-El proyecto incluye:
-
-* Diseño esquemático completo
-* Diseño PCB en Allegro
-* 1 puerto upstream PCIe
-* Múltiples puertos downstream PCIe
-* Soporte para tarjetas PCIe x4 utilizando conectores físicos x16
+![Diseño pcb completo](images/placa_full.jpg)
 
 ---
 
-## Herramientas utilizadas OrCADx Pro
-* Capture CIS
-* PCB Editor / Allegro
-* Constraint Manager
+![Render sencillo de la pcb en 3D](images/render.jpg)
 
 ---
 
-## El diseño actual:
+## Descripción General
 
-* No utiliza Hot Plug
-* CLKREQ# con pull-up
-* Uso de PDC_L en puertos downstream
-* SMBus/I2C no utilizados en downstream PCIe
+Este proyecto consiste en el diseño completo de una tarjeta de expansión PCI Express basada en un switch PCIe Gen3 y desarrollada tomando como referencia la EVB (Evaluation Board) oficial del fabricante Diodes Incorporated.
+
+El objetivo principal del proyecto fue desarrollar una plataforma personalizada de expansión PCIe con:
+
+- Puertos PCIe downstream mediante conectores PCIe x16 físicos
+- Soporte para tarjetas PCIe x4
+- Routing PCIe Gen3 de alta velocidad
+- Diseño optimizado para manufactura
+- PCB multicapa con control de impedancia
+
+Todo el diseño fue realizado en Cadence Allegro / OrCAD siguiendo las recomendaciones del layout guide oficial PCIe.
 
 ---
 
-## Contenido del repositorio
+# Características Principales
 
+## Arquitectura PCIe
+
+- 1 puerto PCIe Upstream
+- 7 puertos PCIe Downstream
+- Conectores PCIe x16 físicos
+- Operación eléctrica x4
+- Señales diferenciales PCIe Gen3
+- REFCLK diferencial de 100 MHz
+
+---
+
+# Diseño del Hardware
+
+## PCB
+
+- PCB de 6 capas
+- Espesor total aproximado: 1.6 mm
+- Control de impedancia diferencial
+- Routing High-Speed optimizado
+- Planos dedicados de GND
+- Compatible con ensamblado SMT
+
+## Stackup
+
+| Capa | Función |
+|---|---|
+| L1 | Señales High-Speed |
+| L2 | Plano GND |
+| L3 | Señales / Power |
+| L4 | Señales / Power |
+| L5 | Plano GND |
+| L6 | Señales |
+
+---
+
+# Integridad de Señal
+
+El diseño fue realizado considerando buenas prácticas de Signal Integrity para PCIe Gen3:
+
+- Differential pair routing
+- Length matching
+- Control de skew
+- Return paths continuos
+- Minimización de stubs
+- Necking controlado
+- Impedance matching
+- Referencia continua a GND
+
+## Constraints utilizados
+
+### PCIe TX/RX
+
+- Impedancia diferencial: 85 Ω
+- Matching intra-par
+- Matching inter-par
+
+### REFCLK
+
+- Impedancia diferencial: 100 Ω
+- Routing diferencial dedicado
+
+---
+
+# Diseño Mecánico
+
+- Compatible con bracket PCIe full-height
+- Soporte para ventilación activa
+- Mounting holes para heatsink/fan
+- Compatible con chasis estándar PCIe
+
+---
+
+# Herramientas Utilizadas
+
+| Herramienta | Uso |
+|---|---|
+| OrCAD Capture CIS | Diseño esquemático |
+| Cadence Allegro PCB Designer | Diseño PCB |
+| Constraint Manager | Reglas de diseño |
+
+---
+
+# Capturas del Proyecto
+
+---
+
+## Top Layer
+
+![Top Layer](images/top.jpg)
+
+---
+
+
+## GND 1 Layer
+
+![GND 1](images/gnd_1.jpg)
+
+---
+
+## Power 1 Layer
+
+![Power 1](images/pwr_1.jpg)
+
+---
+
+## Power 2 Layer
+
+![Power 2](images/pwr_2.jpg)
+
+---
+
+## GND 2 Layer
+
+![GND 2](images/gnd_2.jpg)
+
+---
+
+## Bottom Layer
+
+![bottom](images/bottom.jpg)
+
+---
+
+## Dowstream Ports (schematic preview)
+
+![Schematic](images/Dowstream_ports.jpeg)
+
+Vista de algunos dowstream ports del esquemático del sistema.
+
+---
+
+# Contenido del Repositorio
+
+```text
 /DRL
     Archivos de perforado (NC Drill)
 
@@ -54,8 +186,16 @@ El proyecto incluye:
 /Schematic.pdf
     Exportación PDF del esquemático completo
 
+/DOCS
+    Documentación adicional y otros archivos útiles
+
+/Images
+    Imagenes del repositorio
 ```
 
+---
 
-## Licencia
-Este proyecto se comparte únicamente con fines educativos y de desarrollo. Verificar licencias y restricciones del fabricante del switch PCIe antes de uso comercial.
+# Licencia
+
+Este proyecto se comparte únicamente con fines educativos y de desarrollo.
+
